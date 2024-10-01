@@ -9,14 +9,20 @@ public class GuidParserBenchmarks
     private static readonly string IdString = "HQpYJWoTdkaY43o2uuDPmA";
 
     [Benchmark]
-    public string TestToStringFromGuid()
+    public string ToString_FromGuid()
     {
         return GuidParser.ToStringFromGuid(IdGuid);
     }
 
     [Benchmark]
-    public Guid TestToGuidFromString()
+    public Guid ToGuid_FromString()
     {
         return GuidParser.ToGuidFromString(IdString);
+    }
+
+    [Benchmark]
+    public Guid ToGuid_FromString_Optimized()
+    {
+        return GuidParser.ToGuidFromStringOptimized(IdString);
     }
 }

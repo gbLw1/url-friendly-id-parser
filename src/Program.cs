@@ -11,5 +11,8 @@ BenchmarkRunner.Run<GuidParserBenchmarks>();
 // var UrlFriendlyID = GuidParser.ToStringFromGuid(id);
 // Console.WriteLine($"URL Friendly ID: {UrlFriendlyID}");
 
-// var parsedId = GuidParser.ToGuidFromString(UrlFriendlyID);
-// Console.WriteLine($"Parsed GUID: {parsedId}");
+// // var parsedId = GuidParser.ToGuidFromString(UrlFriendlyID);
+// // Console.WriteLine($"Parsed GUID: {parsedId}");
+
+// var parsedId = GuidParser.ToGuidFromStringOptimized(UrlFriendlyID);
+// Console.WriteLine($"Parsed GUID (Optimized): {parsedId}");
