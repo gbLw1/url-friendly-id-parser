@@ -15,6 +15,12 @@ public class GuidParserBenchmarks
     }
 
     [Benchmark]
+    public string ToString_FromGuid_Optimized()
+    {
+        return GuidParser.ToStringFromGuidOptimized(IdGuid);
+    }
+
+    [Benchmark]
     public Guid ToGuid_FromString()
     {
         return GuidParser.ToGuidFromString(IdString);
